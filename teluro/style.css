@@ -9,10 +9,10 @@ License:  GNU General Public License version 3
 License URI:  http://www.opensource.org/licenses/gpl-license.php GPL v3.0 (or later)
 Description: Teluro is a beautiful, very customizable, multipurpose theme that you can use to create amazing websites through drag and drop. It comes with a pre-designed home page, 5 header designs and over 35 ready-to-use content blocks that you can easily customize. You can also design your own custom blocks by combining more than 25 drag and drop components. Teluro offers lots of customization options (video background, slideshow background, header content types, etc) to help you create a website that stands out in no time. It is also designed with responsiveness, to work on mobile devices right out of the box. Teluro is the only theme you will ever need! CHECK OUT THE DEMOS: https://colibriwp.com/go/teluro-demos
 Tags: entertainment,food-and-drink,portfolio,one-column,two-columns,right-sidebar,grid-layout,custom-header,custom-menu,custom-logo,full-width-template,theme-options,translation-ready,featured-images,threaded-comments
-Version: 1.0.52
+Version: 1.0.57
 Text Domain: teluro
 
-Tested up to: 6.6
+Tested up to: 6.7
 Requires PHP: 5.6
 
 */
@@ -4397,6 +4397,12 @@ html.teluro-theme .aligncenter {
   margin-right: auto;
 }
 
+html.teluro-theme *:has(> .alignleft, > .alignright, > .aligncenter)::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 html.teluro-theme #wpadminbar {
   text-align: initial;
 }
@@ -5994,6 +6000,13 @@ html.teluro-theme .woocommerce .content .h-section input[type=radio] {
   padding: 0;
   left: 0;
   top: 0;
+}
+
+html.teluro-theme .woocommerce-page .content .h-section input[type=checkbox]:not(#extra-1),
+html.teluro-theme .woocommerce-page .content .h-section input[type=radio]:not(#extra-1),
+html.teluro-theme .woocommerce .content .h-section input[type=checkbox]:not(#extra-1),
+html.teluro-theme .woocommerce .content .h-section input[type=radio]:not(#extra-1) {
+  display: inline;
 }
 
 html.teluro-theme .woocommerce-page .content .h-section .wc-block-components-text-input input,
@@ -9980,8 +9993,8 @@ html.teluro-theme ul.colibri-menu.bordered-active-item > li::after {
   bottom: 0.5em;
 }
 
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-in > li:not(.current_page_item):not(current-menu-item)::before,
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-in > li:not(.current_page_item):not(current-menu-item)::after {
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-in > li:not(.current_page_item):not(.current-menu-item)::before,
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-in > li:not(.current_page_item):not(.current-menu-item)::after {
   width: 100%;
   content: "";
   opacity: 0;
@@ -9989,49 +10002,49 @@ html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-in > li:no
   transition: all 0.3s;
 }
 
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-in > li:not(.current_page_item):not(current-menu-item)::before {
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-in > li:not(.current_page_item):not(.current-menu-item)::before {
   margin-top: -10px;
 }
 
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-in > li:not(.current_page_item):not(current-menu-item)::after {
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-in > li:not(.current_page_item):not(.current-menu-item)::after {
   margin-bottom: -10px;
 }
 
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-in > li:not(.current_page_item):not(current-menu-item).hover::before,
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-in > li:not(.current_page_item):not(current-menu-item).hover::after,
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-in > li:not(.current_page_item):not(current-menu-item):hover::before,
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-in > li:not(.current_page_item):not(current-menu-item):hover::after {
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-in > li:not(.current_page_item):not(.current-menu-item).hover::before,
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-in > li:not(.current_page_item):not(.current-menu-item).hover::after,
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-in > li:not(.current_page_item):not(.current-menu-item):hover::before,
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-in > li:not(.current_page_item):not(.current-menu-item):hover::after {
   opacity: 1;
   margin-top: 0;
   margin-bottom: 0;
 }
 
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-out > li:not(.current_page_item):not(current-menu-item)::before,
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-out > li:not(.current_page_item):not(current-menu-item)::after {
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-out > li:not(.current_page_item):not(.current-menu-item)::before,
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-out > li:not(.current_page_item):not(.current-menu-item)::after {
   opacity: 0;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-out > li:not(.current_page_item):not(current-menu-item)::before {
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-out > li:not(.current_page_item):not(.current-menu-item)::before {
   margin-top: 10px;
 }
 
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-out > li:not(.current_page_item):not(current-menu-item)::after {
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-out > li:not(.current_page_item):not(.current-menu-item)::after {
   margin-bottom: 10px;
 }
 
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-out > li:not(.current_page_item):not(current-menu-item).hover::before,
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-out > li:not(.current_page_item):not(current-menu-item).hover::after,
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-out > li:not(.current_page_item):not(current-menu-item):hover::before,
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-out > li:not(.current_page_item):not(current-menu-item):hover::after {
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-out > li:not(.current_page_item):not(.current-menu-item).hover::before,
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-out > li:not(.current_page_item):not(.current-menu-item).hover::after,
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-out > li:not(.current_page_item):not(.current-menu-item):hover::before,
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-out > li:not(.current_page_item):not(.current-menu-item):hover::after {
   opacity: 1;
   margin-bottom: 0;
   margin-top: 0;
 }
 
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-grow > li:not(.current_page_item):not(current-menu-item)::before,
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-grow > li:not(.current_page_item):not(current-menu-item)::after {
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-grow > li:not(.current_page_item):not(.current-menu-item)::before,
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-grow > li:not(.current_page_item):not(.current-menu-item)::after {
   opacity: 0;
   width: 0;
   content: '';
@@ -10039,60 +10052,60 @@ html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-grow > li:
   transition: all 0.3s;
 }
 
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-grow > li:not(.current_page_item):not(current-menu-item)::before {
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-grow > li:not(.current_page_item):not(.current-menu-item)::before {
   left: 0em;
   right: auto;
 }
 
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-grow > li:not(.current_page_item):not(current-menu-item)::after {
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-grow > li:not(.current_page_item):not(.current-menu-item)::after {
   right: 0em;
   left: auto;
 }
 
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-grow > li:not(.current_page_item):not(current-menu-item).hover::before,
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-grow > li:not(.current_page_item):not(current-menu-item).hover::after,
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-grow > li:not(.current_page_item):not(current-menu-item):hover::before,
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-grow > li:not(.current_page_item):not(current-menu-item):hover::after {
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-grow > li:not(.current_page_item):not(.current-menu-item).hover::before,
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-grow > li:not(.current_page_item):not(.current-menu-item).hover::after,
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-grow > li:not(.current_page_item):not(.current-menu-item):hover::before,
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-borders-grow > li:not(.current_page_item):not(.current-menu-item):hover::after {
   opacity: 1;
   width: 100%;
 }
 
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-none > li:not(.current_page_item):not(current-menu-item)::before,
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-none > li:not(.current_page_item):not(current-menu-item)::after {
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-none > li:not(.current_page_item):not(.current-menu-item)::before,
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-none > li:not(.current_page_item):not(.current-menu-item)::after {
   opacity: 0;
   -webkit-transition: none;
   transition: none;
 }
 
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-none > li:not(.current_page_item):not(current-menu-item).hover::before,
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-none > li:not(.current_page_item):not(current-menu-item).hover::after,
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-none > li:not(.current_page_item):not(current-menu-item):hover::before,
-html.teluro-theme ul.colibri-menu.bordered-active-item.effect-none > li:not(.current_page_item):not(current-menu-item):hover::after {
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-none > li:not(.current_page_item):not(.current-menu-item).hover::before,
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-none > li:not(.current_page_item):not(.current-menu-item).hover::after,
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-none > li:not(.current_page_item):not(.current-menu-item):hover::before,
+html.teluro-theme ul.colibri-menu.bordered-active-item.effect-none > li:not(.current_page_item):not(.current-menu-item):hover::after {
   opacity: 1;
 }
 
-html.teluro-theme ul.colibri-menu.bordered-active-item.grow-from-left > li:not(.current_page_item):not(current-menu-item)::before,
-html.teluro-theme ul.colibri-menu.bordered-active-item.grow-from-left > li:not(.current_page_item):not(current-menu-item)::after {
+html.teluro-theme ul.colibri-menu.bordered-active-item.grow-from-left > li:not(.current_page_item):not(.current-menu-item)::before,
+html.teluro-theme ul.colibri-menu.bordered-active-item.grow-from-left > li:not(.current_page_item):not(.current-menu-item)::after {
   left: 0 !important;
   right: auto !important;
 }
 
-html.teluro-theme ul.colibri-menu.bordered-active-item.grow-from-right > li:not(.current_page_item):not(current-menu-item)::before,
-html.teluro-theme ul.colibri-menu.bordered-active-item.grow-from-right > li:not(.current_page_item):not(current-menu-item)::after {
+html.teluro-theme ul.colibri-menu.bordered-active-item.grow-from-right > li:not(.current_page_item):not(.current-menu-item)::before,
+html.teluro-theme ul.colibri-menu.bordered-active-item.grow-from-right > li:not(.current_page_item):not(.current-menu-item)::after {
   right: 0 !important;
   left: auto !important;
 }
 
-html.teluro-theme ul.colibri-menu.bordered-active-item.grow-from-center > li:not(.current_page_item):not(current-menu-item)::before,
-html.teluro-theme ul.colibri-menu.bordered-active-item.grow-from-center > li:not(.current_page_item):not(current-menu-item)::after {
+html.teluro-theme ul.colibri-menu.bordered-active-item.grow-from-center > li:not(.current_page_item):not(.current-menu-item)::before,
+html.teluro-theme ul.colibri-menu.bordered-active-item.grow-from-center > li:not(.current_page_item):not(.current-menu-item)::after {
   left: 50% !important;
   right: auto !important;
 }
 
-html.teluro-theme ul.colibri-menu.bordered-active-item.grow-from-center > li:not(.current_page_item):not(current-menu-item).hover::before,
-html.teluro-theme ul.colibri-menu.bordered-active-item.grow-from-center > li:not(.current_page_item):not(current-menu-item).hover::after,
-html.teluro-theme ul.colibri-menu.bordered-active-item.grow-from-center > li:not(.current_page_item):not(current-menu-item):hover::before,
-html.teluro-theme ul.colibri-menu.bordered-active-item.grow-from-center > li:not(.current_page_item):not(current-menu-item):hover::after {
+html.teluro-theme ul.colibri-menu.bordered-active-item.grow-from-center > li:not(.current_page_item):not(.current-menu-item).hover::before,
+html.teluro-theme ul.colibri-menu.bordered-active-item.grow-from-center > li:not(.current_page_item):not(.current-menu-item).hover::after,
+html.teluro-theme ul.colibri-menu.bordered-active-item.grow-from-center > li:not(.current_page_item):not(.current-menu-item):hover::before,
+html.teluro-theme ul.colibri-menu.bordered-active-item.grow-from-center > li:not(.current_page_item):not(.current-menu-item):hover::after {
   left: 0 !important;
   right: auto !important;
 }

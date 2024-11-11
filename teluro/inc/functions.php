@@ -142,13 +142,15 @@ teluro_theme()
         'flex-width'  => true,
         'width'       => 150,
         'height'      => 70,
-    ))
-    ->register_menus(array(
+    ));
+
+add_action('init', function() {
+    teluro_theme()->register_menus(array(
         'header-menu' => esc_html__('Header Menu', 'teluro'),
         'footer-menu' => esc_html__('Footer Menu', 'teluro'),
     ));
 
-
+}, 1);
 
 if (!apply_filters('colibri_page_builder/installed', false)) {
     teluro_assets()

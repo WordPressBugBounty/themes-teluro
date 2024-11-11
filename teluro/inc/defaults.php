@@ -6,6 +6,16 @@ use ColibriWP\Theme\Theme;
 
 $theme_directory_uri = get_template_directory_uri();
 
+add_action('init', function () {
+    add_filter('colibri_theme_title_default_content', function($title) {
+        return __( 'Create your own opportunities...',
+            'teluro' );
+    });
+    add_filter('colibri_theme_subtitle_default_content', function($subtitle) {
+        return __( "Start creating your website today.",'teluro');
+    });
+});
+
 $teluro_theme_svg_icons = array(
     'fort-awesome'  => array(
         "name"    => "font-awesome/fort-awesome",
@@ -145,16 +155,10 @@ $teluro_theme_divider_style = array(
     'zigzag'                         => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1800 5.8" preserveAspectRatio="none">  <path class="svg-white-bg" d="M5.4.4l5.4 5.3L16.5.4l5.4 5.3L27.5.4 33 5.7 38.6.4l5.5 5.4h.1L49.9.4l5.4 5.3L60.9.4l5.5 5.3L72 .4l5.5 5.3L83.1.4l5.4 5.3L94.1.4l5.5 5.4h.2l5.6-5.4 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.2l5.6-5.4 5.4 5.3L161 .4l5.4 5.3L172 .4l5.5 5.3 5.6-5.3 5.4 5.3 5.7-5.3 5.4 5.4h.2l5.6-5.4 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.4h.2l5.6-5.4 5.5 5.3L261 .4l5.4 5.3L272 .4l5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.1l5.7-5.4 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.3 5.7-5.3 5.4 5.4h.2l5.6-5.4 5.5 5.3L361 .4l5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.1l5.7-5.4 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.1l5.6-5.4 5.5 5.3L461 .4l5.5 5.3 5.6-5.3 5.4 5.3 5.7-5.3 5.4 5.3 5.6-5.3 5.5 5.4h.2l5.6-5.4 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.1L550 .4l5.4 5.3L561 .4l5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.4h.2l5.6-5.4 5.5 5.3 5.6-5.3 5.4 5.3 5.7-5.3 5.4 5.3 5.6-5.3 5.5 5.4h.2L650 .4l5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.4h.2l5.6-5.4 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.4h.2L750 .4l5.5 5.3 5.6-5.3 5.4 5.3 5.7-5.3 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.1l5.7-5.4 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.4h.2L850 .4l5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.2l5.6-5.4 5.4 5.3 5.7-5.3 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.1l5.7-5.4 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.4h.2l5.6-5.4 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.2l5.6-5.4 5.4 5.3 5.7-5.3 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.4h.2l5.6-5.4 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.4h.2l5.6-5.4 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.1l5.7-5.4 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.4h.2l5.6-5.4 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.2l5.6-5.4 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.1l5.7-5.4 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.4h.2l5.6-5.4 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.2l5.6-5.4 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.3 5.7-5.3 5.4 5.4h.2l5.6-5.4 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.4h.2l5.6-5.4 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.1l5.6-5.4 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.3 5.7-5.3 5.4 5.4h.2l5.6-5.4 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.1l5.7-5.4 5.4 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.5 5.4h.1l5.6-5.4 5.5 5.3 5.6-5.3 5.5 5.3 5.6-5.3 5.4 5.3 5.7-5.3 5.4 5.3 5.6-5.3 5.5 5.4V0H-.2v5.8z"/></svg>',
 );
 
-$teluro_theme_click_pen_to_edit_title = __( 'Create your own opportunities...', 'teluro' );
 
-if ( apply_filters( 'colibri_page_builder/installed', false ) ) {
-    $teluro_theme_click_pen_to_edit_title = __( 'Just click and start typing to change the site headline.',
-        'teluro' );
-}
 
-$teluro_theme_action_button = __( 'Action Button %d', 'teluro' );
 
-$teluro_lorem_ipsum = "Start creating your website today.";;
+$teluro_lorem_ipsum = "Start creating your website today.";
 
 return array(
     'mobile_media'                      => '@media (max-width:767px)',
@@ -171,7 +175,6 @@ return array(
     'blog_post_highlight_enabled'       => false,
     'blog_post_thumb_placeholder_color' => '#F79007',
     'assets_js_key'                     => "teluroFrontendData",
-    'edit_this_text_in_customizer'      => $teluro_theme_click_pen_to_edit_title,
     'default_icon'                      => $teluro_theme_svg_icons['fort-awesome'],
     'icons'                             => $teluro_theme_svg_icons,
     'divider_style'                     => $teluro_theme_divider_style,
@@ -240,7 +243,7 @@ return array(
             'style' => array(
 				'descendants' => array(
 					'innerMenu' => array(
-					'justifyContent' => 'none',
+						'justifyContent' => 'flex-end',
 					)
 				)
             )
@@ -334,7 +337,7 @@ return array(
         ),
         "title"        => array(
             "show"  => true,
-            "value" => $teluro_theme_click_pen_to_edit_title,
+            "value" => 'Create your own opportunities...',
         ),
         "subtitle"     => array(
             "show"  => true,
@@ -482,45 +485,5 @@ return array(
                 'showTopBar' => false,
             )
         )
-    ),
-
-    'front_page_designs' => array(
-
-        array(
-            'name'  => __( "Modern", 'teluro' ),
-            "index" => 3,
-            "meta"  => array(
-                "slug"    => "modern",
-                "version" => "v2"
-            )
-        ),
-
-        array(
-            'name'    => __( "Modern", 'teluro' ),
-            "index"   => 3,
-            "display" => false,
-            "meta"    => array(
-                "slug"    => "modern",
-                "version" => "v1"
-            )
-        ),
-
-        array(
-            'name'  => __( "Classic", 'teluro' ),
-            "index" => 2,
-            "meta"  => array(
-                "slug"    => "classic",
-                "version" => "v1"
-            )
-        ),
-
-        array(
-            'name'  => __( "Fullscreen", 'teluro' ),
-            "index" => 1,
-            "meta"  => array(
-                "slug"    => "fullscreen",
-                "version" => "v1"
-            )
-        ),
     )
 );
