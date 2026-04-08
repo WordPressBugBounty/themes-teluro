@@ -27,7 +27,7 @@ function teluro_check_php_version() {
 
 function teluro_php_version_notice() {
 	?>
-    <div class="notice notice-alt notice-error notice-large">
+    <div class="notice notice-alt colibri-notice notice-error notice-large">
         <h4><?php esc_html_e( 'Teluro theme activation failed!', 'teluro' ); ?></h4>
         <p>
 			<?php printf( esc_html__( 'You need to update your PHP version to use the %s.', 'teluro' ),

@@ -475,3 +475,4 @@ add_action('wp_footer', function() {
     </script>
     <?php
 });
+require_once __DIR__ . "/siteleads-integration/index.php";
